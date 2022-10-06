@@ -1,0 +1,40 @@
+<div class="container" style="min-height: 70vh;">
+  <a class="btn btn-outline-primary" routerLink="/usuarios/cadastrar">Novo usuario</a>
+  <table class="table w-100 text-center align-middle">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th style="min-width: 200px; width: 200px">Nome</th>
+        <th>Telefone</th>
+        <th>Email</th>
+        <th>Acesso</th>
+        <th>CEP</th>
+        <th>Rua</th>
+        <th>Cidade</th>
+        <th>Bairro</th>
+        <th>UF</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of usuarios">
+      <tr>
+        <th>{{ item.id }}</th>
+        <td>{{ item.nome }}</td>
+        <td>{{ item.telefone }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.acesso }}</td>
+        <td>{{ item.cep }}</td>
+        <td>{{ item.endereco }}</td>
+        <td>{{ item.cidade }}</td>
+        <td>{{ item.bairro }}</td>
+        <td>{{ item.estado }}</td>
+        <td>
+          <div class="btn-group">
+            <button class="btn btn-warning" (click)="alterar(item.id)">Editar</button>
+            <button class="btn btn-danger" (click)="excluir(item.id)">Excluir</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,43 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Ettore Alessandro Rollo",
+      "telefone": "15981261762",
+      "email": "ettorerollo@hotmail.com",
+      "senha": "123",
+      "acesso": "total",
+      "cep": "18020030",
+      "endereco": "André de Zunega",
+      "bairro": "Vila Hortência",
+      "cidade": "Sorocaba",
+      "estado": "SP "
+    },
+    {
+      "id": 2,
+      "nome": "Rodrigo Costa Filho",
+      "telefone": "12315124512",
+      "email": "rodrigocosta@hotmail.com",
+      "senha": "123",
+      "acesso": "restrito",
+      "cep": "18020030",
+      "endereco": "André de Zunega",
+      "bairro": "Vila Hortência",
+      "cidade": "Sorocaba",
+      "estado": "SP "
+    },
+    {
+      "nome": "Giane Beatrice",
+      "telefone": "15991924689",
+      "email": "giane@gmail.com",
+      "senha": "1234",
+      "acesso": "total",
+      "cep": "18020030",
+      "endereco": "Rua André de Zunega",
+      "bairro": "Vila Hortência",
+      "cidade": "Sorocaba",
+      "estado": "SP",
+      "id": 3
+    }
+  ]
+}

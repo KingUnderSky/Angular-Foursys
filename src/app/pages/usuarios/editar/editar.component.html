@@ -1,0 +1,69 @@
+<app-header></app-header>
+<div class="margin-content">
+  <h3 class="fw-light py-3">Produtos | Cadastro</h3>
+  <form class="row g-3" [formGroup]="formUsuario" (ngSubmit)="editar()">
+    <div class="col-md-12">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="nome" formControlName="nome">
+      <div *ngIf="formUsuario.get('nome')?.errors?.['required'] && formUsuario.get('nome')?.touched">
+        <small style="color: red; font-style: italic; font-weight: bold; font-size: 10px;">Campo Nome Obrigatório</small>
+      </div>
+      <div class="col-3">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input type="text" class="form-control" id="telefone" formControlName="telefone">
+        <div *ngIf="formUsuario.get('telefone')?.errors?.[''] && formUsuario.get('telefone')?.touched">
+          <small style="color: red; font-style: italic; font-weight: bold; font-size: 10px;">Campo Telefone deve ter até 11 caracteres</small>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" formControlName="email">
+        <div *ngIf="formUsuario.get('email')?.errors?.['required'] && formUsuario.get('email')?.touched">
+          <small style="color: red; font-style: italic; font-weight: bold; font-size: 10px;">Campo Email Obrigatório</small>
+        </div>
+      </div>
+      <div class="col-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="senha" formControlName="senha">
+        <div *ngIf="formUsuario.get('senha')?.errors?.['required'] && formUsuario.get('senha')?.touched">
+          <small style="color: red; font-style: italic; font-weight: bold; font-size: 10px;">Campo Senha Obrigatório</small>
+        </div>
+      </div>
+      <div class="col-3">
+        <label for="senha" class="form-label">Acesso</label>
+        <input type="text" class="form-control" id="acesso" formControlName="acesso">
+        <div *ngIf="formUsuario.get('acesso')?.errors?.['required'] && formUsuario.get('acesso')?.touched">
+          <small style="color: red; font-style: italic; font-weight: bold; font-size: 10px;">Campo Acesso Obrigatório</small>
+        </div>
+      </div>
+      <div class="col-3">
+        <label for="cep" class="form-label">CEP</label>
+        <input type="text" class="form-control" id="cep" formControlName="cep" (blur)="buscarCep()">
+        <div *ngIf="formUsuario.get('cep')?.errors?.['required'] && formUsuario.get('cep')?.touched">
+          <small style="color: red; font-style: italic; font-weight: bold; font-size: 10px;">Campo CEP Obrigatório</small>
+        </div>
+      </div>
+      <div class="col-3">
+        <label for="endereco" class="form-label">Endereço</label>
+        <input type="text" class="form-control" id="endereco" formControlName="endereco">
+      </div>
+      <div class="col-3">
+        <label for="bairro" class="form-label">Bairro</label>
+        <input type="text" class="form-control" id="bairro" formControlName="bairro">
+      </div>
+      <div class="col-3">
+        <label for="cidade" class="form-label">Cidade</label>
+        <input type="text" class="form-control" id="cidade" formControlName="cidade">
+      </div>
+      <div class="col-3">
+        <label for="estado" class="form-label">Estado</label>
+        <input type="text" class="form-control" id="estado" formControlName="estado">
+      </div>
+      <div class="col-12 py-3">
+        <button type="submit" class="btn btn-primary" style="margin-right: 10px;" [disabled]="!formUsuario.valid">Salvar</button>
+        <button type="button" class="btn btn-dark" routerLink="/usuarios">Voltar</button>
+      </div>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>
