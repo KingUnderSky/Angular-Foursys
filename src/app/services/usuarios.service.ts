@@ -18,4 +18,8 @@ export class UsuariosService {
   deleteUsuario(id: number): Observable<any> {
     return this._http.delete(urlDatabase + "usuarios/" + id);
   }
+
+  postUsuario(obj: any): Observable<any> {
+    return this._http.post(urlDatabase + "usuarios/", obj);
+  }
 }

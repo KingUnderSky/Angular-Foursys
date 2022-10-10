@@ -9,43 +9,58 @@
   <div class="row">
     <div class="col order-md-1">
       <h4 class="mb-3">Informações do usuário</h4>
+      <form [formGroup]="formUsuario" (ngSubmit)="cadastrar()">
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="nome">Nome</label>
-            <input type="text" class="form-control" id="nome" placeholder="" value="" required="">
+            <input type="text" class="form-control" id="nome" formControlName="nome">
             <div class="text-danger">
-              <p style="min-height: 30px;"></p>
+              <div *ngIf="formUsuario.get('nome')?.errors?.['required'] && formUsuario.get('nome')?.touched">
+                <small style="color: red; font-style: italic; font-weight: bold; font-size: 10px;">Campo Nome Obrigatório</small>
+              </div>
             </div>
           </div>
           <div class="col-md-6 mb-3">
             <label for="telefone">Telefone</label>
-            <input type="text" class="form-control" id="telefone" placeholder="" value="" required="">
+            <input type="text" class="form-control" id="telefone" formControlName="telefone">
             <div class="text-danger">
-              <p style="min-height: 30px;"></p>
+              <div *ngIf="formUsuario.get('telefone')?.errors?.[''] && formUsuario.get('telefone')?.touched">
+                <small style="color: red; font-style: italic; font-weight: bold; font-size: 10px;">Campo Telefone deve ter até 11 caracteres</small>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="mb-3">
           <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="" required="">
+            <input type="email" class="form-control" id="email" formControlName="email">
             <div class="text-danger">
-              <p style="min-height: 30px;"></p>
+              <div *ngIf="formUsuario.get('email')?.errors?.['required'] && formUsuario.get('email')?.touched">
+                <small style="color: red; font-style: italic; font-weight: bold; font-size: 10px;">Campo Email Obrigatório</small>
+              </div>
             </div>
         </div>
 
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="senha">Senha</label>
-            <input type="password" class="form-control" id="senha" placeholder="" >
+            <input type="password" class="form-control" id="senha" formControlName="senha">
             <div class="text-danger">
-              <p style="min-height: 30px;"></p>
+              <div *ngIf="formUsuario.get('senha')?.errors?.['required'] && formUsuario.get('senha')?.touched">
+                <small style="color: red; font-style: italic; font-weight: bold; font-size: 10px;">Campo Senha Obrigatório</small>
+              </div>
             </div>
           </div>
           <div class="col-md-6 mb-3">
-            <p>select acesso</p>
+            <label for="acesso">Acesso</label>
+            <select class="form-control form-select" id="acesso" formControlName="acesso" formControlName="acesso">
+              <option value="restrito">Restrito</option>
+              <option value="total">Total</option>
+            </select>
             <div class="text-danger">
-              <p style="min-height: 30px;"></p>
+              <div *ngIf="formUsuario.get('acesso')?.errors?.['required'] && formUsuario.get('acesso')?.touched">
+                <small style="color: red; font-style: italic; font-weight: bold; font-size: 10px;">Campo Acesso Obrigatório</small>
+              </div>
             </div>
           </div>
         </div>
@@ -53,37 +68,43 @@
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="cep">CEP</label>
-            <input type="text" class="form-control" id="cep" placeholder="" value="">
+            <input type="text" class="form-control" id="cep" (blur)="buscarCep()" formControlName="cep">
             <div class="text-danger">
-              <p style="min-height: 30px;"></p>
+              <div *ngIf="formUsuario.get('cep')?.errors?.['required'] && formUsuario.get('cep')?.touched">
+                <small style="color: red; font-style: italic; font-weight: bold; font-size: 10px;">Campo CEP Obrigatório</small>
+              </div>
+              <div [class]="classesToApply">
+                <small>{{ buscaInfo }}</small>
+              </div>
             </div>
           </div>
           <div class="col-md-6 mb-3">
             <label for="endereco">Endereço</label>
-            <input type="text" class="form-control" id="endereco" placeholder="" value="0" disabled>
+            <input type="text" class="form-control" id="endereco" formControlName="endereco">
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="bairro">Bairro</label>
-            <input type="text" class="form-control" id="bairro" placeholder="" value="" disabled>
+            <input type="text" class="form-control" formControlName="bairro">
           </div>
           <div class="col-md-6 mb-3">
             <label for="cidade">Cidade</label>
-            <input type="text" class="form-control" id="cidade" placeholder="" value="0" disabled>
+            <input type="text" class="form-control" formControlName="cidade">
           </div>
         </div>
 
         <div class="row mb-3">
           <div class="col-md-6 mb-3">
             <label for="estado">Estado</label>
-            <input type="text" class="form-control" id="estado" placeholder="" value="" disabled>
+            <input type="text" class="form-control" formControlName="estado">
           </div>
         </div>
 
-        <button class="btn btn-primary btn-lg btn-block" (click)="cadastrar()">Cadastrar</button>
+        <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled]="!formUsuario.valid">Cadastrar</button>
         <button routerLink="/usuarios" class="btn btn-warning btn-lg btn-block" style="margin-left: 10px;">Voltar</button>
+      </form>
     </div>
   </div>
 </div>
