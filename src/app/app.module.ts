@@ -10,6 +10,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ContentComponent } from './pages/content/content.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { FooterComponent } from './pages/footer/footer.component';
+import { ProdutoEditarComponent } from './pages/produtos/produto-editar/produto-editar.component';
+import { ProdutoCadastrarComponent } from './pages/produtos/produto-cadastrar/produto-cadastrar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FooterComponent } from './pages/footer/footer.component';
     HomeComponent,
     ContentComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProdutoEditarComponent,
+    ProdutoCadastrarComponent
   ],
   imports: [
     BrowserModule,

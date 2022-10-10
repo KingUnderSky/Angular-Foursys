@@ -26,8 +26,8 @@
         <td *ngIf="isAdmin()">{{ item.estoqueMinimo }}</td>
         <td>{{ item.estoqueAtual }}</td>
         <td *ngIf="isAdmin()">
-          <button class="btn btn-warning" style="margin-right: 5px;">Editar</button>
-          <button class="btn btn-danger">Deletar</button>
+          <button class="btn btn-warning" style="margin-right: 5px;" (click)="editar(item.id)">Editar</button>
+          <button class="btn btn-danger" (click)="deletar(item.id)">Deletar</button>
         </td>
       </tr>
     </tbody>
