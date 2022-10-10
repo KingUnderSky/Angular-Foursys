@@ -1,8 +1,3 @@
-LOGIN - ARMAZENAR USUÁRIO E ACESSO // TODO
-HEADER - USUARIOS, PRODUTOS, HOME, LOGOUT // TODO
-FOOTER // TODO
-TELA INICIAL - HEADER, USUARIOS, FOOTER // TODO
-
 USUARIOS - CRUD (form control e form group) -  {
   nome - validar required,
   telefone - validar - maximo 11 digitos,
@@ -15,16 +10,6 @@ USUARIOS - CRUD (form control e form group) -  {
   cidade,
   estado
 }// TODO
-
-PRODUTOS - CRUD (template drive com ngmodel e model(class)) {
-  nome - validar - required
-  marca - validar - required
-  modelo - validar - required
-  precoCusto - validar - se vazio, colocar 0.00
-  precoVenda - validar - se vazio, colocar 0.00
-  estoque minimo - validar - se vazio, colocar 0
-  estoque atual - validar - se vazio, colocar 0
-} // TODO
 
 Validar lint // TODO
 Validar deepscan // TODO
