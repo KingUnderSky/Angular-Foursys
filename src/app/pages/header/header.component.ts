@@ -10,6 +10,7 @@ export class HeaderComponent {
 
   constructor(private _route: Router) { }
 
+  //  função de logout
   logout(): void {
     window.localStorage.clear();
     this._route.navigateByUrl('/login');
