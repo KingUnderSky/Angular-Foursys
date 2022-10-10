@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  usuario: String = "";
+  senha: String = "";
+
+  constructor(private _route: Router) { }
 
   ngOnInit(): void {
+    if(false) {
+      this._route.navigateByUrl('/home');
+    }
+  }
+
+  login(): void {
+
   }
 
 }
