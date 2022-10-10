@@ -1,17 +1,30 @@
 {
   "usuarios": [
     {
-      "id": 1,
       "nome": "Ettore Alessandro Rollo",
       "telefone": "15981261762",
       "email": "ettorerollo@hotmail.com",
       "senha": "intelbras",
       "acesso": "total",
-      "cep": "18020030",
-      "endereco": "Rua André de Zunega",
-      "bairro": "Vila Hortência",
+      "cep": "18072016",
+      "endereco": "Alameda Brauna",
+      "bairro": "Jardim Residencial das Dálias",
       "cidade": "Sorocaba",
-      "estado": "SP"
+      "estado": "SP",
+      "id": 1
+    },
+    {
+      "nome": "Giane Beatrice",
+      "telefone": "1859126",
+      "email": "giane@gmail.com",
+      "senha": "intelbras",
+      "acesso": "total",
+      "cep": "18072016",
+      "endereco": "Alameda Brauna",
+      "bairro": "Jardim Residencial das Dálias",
+      "cidade": "Sorocaba",
+      "estado": "SP",
+      "id": 2
     }
   ],
   "produtos": [

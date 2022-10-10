@@ -48,7 +48,6 @@ export class UsuarioCadastrarComponent implements OnInit {
   //  função para cadastrar usuário
   cadastrar(): void {
     this._usuario.postUsuario(this.formUsuario.getRawValue()).subscribe((data: any) => {
-      console.log(data);
       if(this.logado) {
         this._route.navigateByUrl('/usuarios');
       }
