@@ -18,12 +18,12 @@
     {
       "id": 1,
       "nome": "Faca",
-      "Marca": "Tramontina",
-      "Modelo": "De açougue",
+      "marca": "Tramontina",
+      "modelo": "De açougue",
       "precoCusto": 5.00,
       "precoVenda": 7.00,
-      "estoqueMinimo": 0,
-      "estoqueAtual": 5
+      "estoqueMinimo": 5,
+      "estoqueAtual": 15
     }
   ]
 }

@@ -1,5 +1,6 @@
 <div class="container">
-  <h1>Produtos</h1>
+  <h1 class="mb-3">Produtos</h1>
+  <button routerLink="/produtos/cadastrar" class="btn btn-primary mb-3">Novo produto</button>
   <table class="table w-100">
     <thead>
       <tr>
@@ -11,10 +12,24 @@
         <th>Preço de venda</th>
         <th *ngIf="isAdmin()">Estoque Mínimo</th>
         <th>Estoque Atual</th>
+        <th *ngIf="isAdmin()">Ações</th>
       </tr>
     </thead>
     <tbody *ngFor="let item of produtos">
-
+      <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.nome }}</td>
+        <td>{{ item.marca }}</td>
+        <td>{{ item.modelo }}</td>
+        <td *ngIf="isAdmin()">R$ {{ item.precoCusto.toFixed([2]) }}</td>
+        <td>R$ {{ item.precoVenda.toFixed([2]) }}</td>
+        <td *ngIf="isAdmin()">{{ item.estoqueMinimo }}</td>
+        <td>{{ item.estoqueAtual }}</td>
+        <td *ngIf="isAdmin()">
+          <button class="btn btn-warning" style="margin-right: 5px;">Editar</button>
+          <button class="btn btn-danger">Deletar</button>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
