@@ -11,6 +11,6 @@ export class UsuariosService {
   constructor(private _http: HttpClient) { }
 
   getUsers(): Observable<any> {
-    return this._http.get(urlDatabase);
+    return this._http.get(urlDatabase + "/usuarios");
   }
 }

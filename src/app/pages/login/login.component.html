@@ -6,12 +6,13 @@
       <div class="form-floating">
         <input type="text" class="form-control" id="floatingInput" placeholder="Usuário" [(ngModel)]="usuario">
         <label for="floatingInput">Usuário</label>
+        <p class="text-danger" style="min-height: 35px;">{{ validaUsuario }}</p>
       </div>
       <div class="form-floating">
         <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="senha">
         <label for="floatingPassword">Senha</label>
+        <p class="text-danger" style="min-height: 35px;">{{ validaSenha }}</p>
       </div>
-
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Lembrar de mim
