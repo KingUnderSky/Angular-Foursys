@@ -10,6 +10,7 @@ export class UsuariosService {
 
   constructor(private _http: HttpClient) { }
 
+  //  retorna uma array de usuarios
   getUsers(): Observable<any> {
     return this._http.get(urlDatabase + "/usuarios");
   }
