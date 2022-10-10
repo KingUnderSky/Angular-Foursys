@@ -11,15 +11,15 @@
       <h4 class="mb-3">Informações do usuário</h4>
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="Nome">Nome</label>
-            <input type="text" class="form-control" id="Nome" placeholder="" value="" required="">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" placeholder="" value="" required="">
             <div class="text-danger">
               <p style="min-height: 30px;"></p>
             </div>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="Marca">Marca</label>
-            <input type="text" class="form-control" id="Marca" placeholder="" value="" required="">
+            <label for="telefone">Telefone</label>
+            <input type="text" class="form-control" id="telefone" placeholder="" value="" required="">
             <div class="text-danger">
               <p style="min-height: 30px;"></p>
             </div>
@@ -27,8 +27,8 @@
         </div>
 
         <div class="mb-3">
-          <label for="Modelo">Modelo</label>
-            <input type="text" class="form-control" id="Modelo" placeholder="" required="">
+          <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="" required="">
             <div class="text-danger">
               <p style="min-height: 30px;"></p>
             </div>
@@ -36,25 +36,52 @@
 
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="precoCusto">Preço de custo</label>
-            <input type="number" class="form-control" id="precoCusto" placeholder="" value="0">
+            <label for="senha">Senha</label>
+            <input type="password" class="form-control" id="senha" placeholder="" >
+            <div class="text-danger">
+              <p style="min-height: 30px;"></p>
+            </div>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="precoVenda">Preço de venda</label>
-            <input type="number" class="form-control" id="precoVenda" placeholder="" value="0">
+            <p>select acesso</p>
+            <div class="text-danger">
+              <p style="min-height: 30px;"></p>
+            </div>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="estoqueMinimo">Estoque mínimo</label>
-            <input type="number" class="form-control" id="estoqueMinimo" placeholder="" value="0">
+            <label for="cep">CEP</label>
+            <input type="text" class="form-control" id="cep" placeholder="" value="">
+            <div class="text-danger">
+              <p style="min-height: 30px;"></p>
+            </div>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="estoqueAtual">Estoque atual</label>
-            <input type="number" class="form-control" id="estoqueAtual" placeholder="" value="0">
+            <label for="endereco">Endereço</label>
+            <input type="text" class="form-control" id="endereco" placeholder="" value="0" disabled>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="bairro">Bairro</label>
+            <input type="text" class="form-control" id="bairro" placeholder="" value="" disabled>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cidade">Cidade</label>
+            <input type="text" class="form-control" id="cidade" placeholder="" value="0" disabled>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6 mb-3">
+            <label for="estado">Estado</label>
+            <input type="text" class="form-control" id="estado" placeholder="" value="" disabled>
+          </div>
+        </div>
+
         <button class="btn btn-primary btn-lg btn-block" (click)="cadastrar()">Cadastrar</button>
         <button routerLink="/usuarios" class="btn btn-warning btn-lg btn-block" style="margin-left: 10px;">Voltar</button>
     </div>
