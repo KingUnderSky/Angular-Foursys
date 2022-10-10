@@ -11,12 +11,12 @@ import { UsuariosService } from '../../services/usuarios.service';
 export class LoginComponent implements OnInit {
 
   //  variáveis de input
-  usuario: String = "";
-  senha: String = "";
+  usuario: string = "";
+  senha: string = "";
 
   //  textos de validação
-  validaUsuario = "";
-  validaSenha = "";
+  validaUsuario: string = "";
+  validaSenha: string = "";
 
   //  caso o usuário exista
   usuarioExiste: boolean = false;

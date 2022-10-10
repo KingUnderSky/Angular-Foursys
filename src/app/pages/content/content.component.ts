@@ -10,8 +10,9 @@ import { Router } from '@angular/router';
 export class ContentComponent implements OnInit {
 
   //  Variáveis
-  acesso: String = "";
+  acesso: string = "";
 
+  // lista de produtos
   produtos: any[] = [];
 
   constructor(private _produtos: ProdutosService, private _route: Router) { }
@@ -24,6 +25,7 @@ export class ContentComponent implements OnInit {
     });
   }
 
+  // se administrador, retornar true, senão, false
   isAdmin(): boolean {
     if(this.acesso == "total")
       return true;
@@ -31,10 +33,12 @@ export class ContentComponent implements OnInit {
     return false
   }
 
+  //  navega para tela de editar
   editar(id: number): void {
     this._route.navigateByUrl('/produtos/editar/' + id);
   }
 
+  // deleta produto
   deletar(id: number): void {
     this._produtos.deleteProduto(id);
   }

@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class ProjectService { }
 
 //  url do banco de dados
-export const urlDatabase = "http://localhost:3000";
+export const urlDatabase: string = "http://localhost:3000";
 
 // url da api de cep
-export const urlCep = "https://viacep.com.br/ws/";
+export const urlCep: string = "https://viacep.com.br/ws/";

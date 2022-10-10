@@ -15,6 +15,7 @@ export class ProdutosService {
     return this._http.get(urlDatabase + "/produtos");
   }
 
+  //  deleta um produto por id
   deleteProduto(id: number): Observable<any> {
     return this._http.delete(urlDatabase + "/produtos/" + id)
   }
