@@ -6,7 +6,7 @@
       "telefone": "15981261762",
       "email": "ettorerollo@hotmail.com",
       "senha": "intelbras",
-      "acesso": "total",
+      "acesso": "restrito",
       "cep": "18020030",
       "endereco": "Rua André de Zunega",
       "bairro": "Vila Hortência",
@@ -16,23 +16,23 @@
   ],
   "produtos": [
     {
-      "id": 1,
       "nome": "Faca",
       "marca": "Tramontina",
       "modelo": "De açougue",
       "precoCusto": 5,
       "precoVenda": 7,
       "estoqueMinimo": 5,
-      "estoqueAtual": 15
+      "estoqueAtual": 15,
+      "id": 1
     },
     {
       "nome": "Secador de cabelo",
       "marca": "Philco",
-      "modelo": "K9000",
-      "precoCusto": 100,
-      "precoVenda": 250,
-      "estoqueMinimo": 5,
-      "estoqueAtual": 20,
+      "modelo": "Modelo master",
+      "precoCusto": 0,
+      "precoVenda": 0,
+      "estoqueMinimo": 0,
+      "estoqueAtual": 0,
       "id": 2
     }
   ]

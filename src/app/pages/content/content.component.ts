@@ -19,10 +19,7 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.acesso = String(window.localStorage.getItem('acesso'));
-
-    this._produtos.getProdutos().subscribe((data: any) => {
-      this.produtos = data;
-    });
+    this.buscarProdutos();
   }
 
   // se administrador, retornar true, senão, false
@@ -40,7 +37,16 @@ export class ContentComponent implements OnInit {
 
   // deleta produto
   deletar(id: number): void {
-    this._produtos.deleteProduto(id);
+    this._produtos.deleteProduto(id).subscribe(() => {
+      this.buscarProdutos();
+    });
+  }
+
+  //  busca os produtos e popula a tabela
+  buscarProdutos(): void {
+    this._produtos.getProdutos().subscribe((data: any) => {
+      this.produtos = data;
+    });
   }
 
 }

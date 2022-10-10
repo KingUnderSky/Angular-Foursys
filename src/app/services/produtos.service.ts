@@ -13,16 +13,24 @@ export class ProdutosService {
 
   //  retorna uma array de produtos
   getProdutos(): Observable<any> {
-    return this._http.get(urlDatabase + "/produtos");
+    return this._http.get(urlDatabase + "produtos");
   }
 
+  getProduto(id: number): Observable<any> {
+    return this._http.get(urlDatabase + "produtos/" + id);
+  }
   //  deleta um produto por id
   deleteProduto(id: number): Observable<any> {
-    return this._http.delete(urlDatabase + "/produtos/" + id)
+    return this._http.delete(urlDatabase + "produtos/" + id)
   }
 
   //  cria um novo produto
   postProduto(obj: Produto): Observable<any> {
-    return this._http.post(urlDatabase + "/produtos", obj);
+    return this._http.post(urlDatabase + "produtos", obj);
+  }
+
+  //  atualiza um produto existente
+  putProduto(obj: Produto, id: number): Observable<any> {
+    return this._http.put(urlDatabase + "produtos/" + id, obj);
   }
 }

@@ -12,6 +12,6 @@ export class UsuariosService {
 
   //  retorna uma array de usuarios
   getUsers(): Observable<any> {
-    return this._http.get(urlDatabase + "/usuarios");
+    return this._http.get(urlDatabase + "usuarios");
   }
 }

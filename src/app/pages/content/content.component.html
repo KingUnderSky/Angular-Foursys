@@ -1,6 +1,6 @@
 <div class="container">
   <h1 class="mb-3">Produtos</h1>
-  <button routerLink="/produtos/cadastrar" class="btn btn-primary mb-3">Novo produto</button>
+  <button routerLink="/produtos/cadastrar" class="btn btn-primary mb-3" *ngIf="isAdmin()">Novo produto</button>
   <table class="table w-100">
     <thead>
       <tr>

@@ -66,7 +66,6 @@ export class ProdutoCadastrarComponent implements OnInit {
     this._produto.postProduto(this.formProduto).subscribe(() => {
       this._route.navigateByUrl('/home');
     });
-
   }
 
   // função para validar o formulário
