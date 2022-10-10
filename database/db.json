@@ -1,0 +1,29 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Ettore Alessandro Rollo",
+      "telefone": "15981261762",
+      "email": "ettorerollo@hotmail.com",
+      "senha": "intelbras",
+      "acesso": "total",
+      "cep": "18020030",
+      "endereco": "Rua André de Zunega",
+      "bairro": "Vila Hortência",
+      "cidade": "Sorocaba",
+      "estado": "SP"
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Faca",
+      "Marca": "Tramontina",
+      "Modelo": "De açougue",
+      "precoCusto": 5.00,
+      "precoVenda": 7.00,
+      "estoqueMinimo": 0,
+      "estoqueAtual": 5
+    }
+  ]
+}
