@@ -1,1 +1,20 @@
-<p>content works!</p>
+<div class="container">
+  <h1>Produtos</h1>
+  <table class="table w-100">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th *ngIf="isAdmin()">Preço de custo</th>
+        <th>Preço de venda</th>
+        <th *ngIf="isAdmin()">Estoque Mínimo</th>
+        <th>Estoque Atual</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of produtos">
+
+    </tbody>
+  </table>
+</div>
