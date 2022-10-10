@@ -20,10 +20,20 @@
       "nome": "Faca",
       "marca": "Tramontina",
       "modelo": "De açougue",
-      "precoCusto": 5.00,
-      "precoVenda": 7.00,
+      "precoCusto": 5,
+      "precoVenda": 7,
       "estoqueMinimo": 5,
       "estoqueAtual": 15
+    },
+    {
+      "nome": "Secador de cabelo",
+      "marca": "Philco",
+      "modelo": "K9000",
+      "precoCusto": 100,
+      "precoVenda": 250,
+      "estoqueMinimo": 5,
+      "estoqueAtual": 20,
+      "id": 2
     }
   ]
 }

@@ -1,1 +1,62 @@
-<p>produto-cadastrar works!</p>
+<app-header></app-header>
+<div class="container">
+  <div class="py-5 text-center">
+    <h2>Cadastro</h2>
+    <p class="lead">Cadastre um novo produto</p>
+  </div>
+
+  <div class="row">
+    <div class="col order-md-1">
+      <h4 class="mb-3">Informações do produto</h4>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="Nome">Nome</label>
+            <input type="text" class="form-control" id="Nome" placeholder="" value="" required="" [(ngModel)]="formProduto.nome">
+            <div class="text-danger">
+              <p style="min-height: 30px;">{{ validaNome }}</p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="Marca">Marca</label>
+            <input type="text" class="form-control" id="Marca" placeholder="" value="" required="" [(ngModel)]="formProduto.marca">
+            <div class="text-danger">
+              <p style="min-height: 30px;">{{ validaMarca }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="Modelo">Modelo</label>
+            <input type="text" class="form-control" id="Modelo" placeholder="" required="" [(ngModel)]="formProduto.modelo">
+            <div class="text-danger">
+              <p style="min-height: 30px;">{{ validaModelo }}</p>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="precoCusto">Preço de custo</label>
+            <input type="number" class="form-control" id="precoCusto" placeholder="" [(ngModel)]="formProduto.precoCusto" value="0">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="precoVenda">Preço de venda</label>
+            <input type="number" class="form-control" id="precoVenda" placeholder="" [(ngModel)]="formProduto.precoVenda" value="0">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="estoqueMinimo">Estoque mínimo</label>
+            <input type="number" class="form-control" id="estoqueMinimo" placeholder="" [(ngModel)]="formProduto.estoqueMinimo" value="0">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="estoqueAtual">Estoque atual</label>
+            <input type="number" class="form-control" id="estoqueAtual" placeholder="" [(ngModel)]="formProduto.estoqueAtual" value="0">
+          </div>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" (click)="cadastrar()">Cadastrar</button>
+        <button routerLink="/home" class="btn btn-warning btn-lg btn-block" style="margin-left: 10px;">Voltar</button>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
