@@ -12,6 +12,9 @@ import { HeaderComponent } from './pages/header/header.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { ProdutoEditarComponent } from './pages/produtos/produto-editar/produto-editar.component';
 import { ProdutoCadastrarComponent } from './pages/produtos/produto-cadastrar/produto-cadastrar.component';
+import { UsuarioCadastrarComponent } from './pages/usuarios/usuario-cadastrar/usuario-cadastrar.component';
+import { UsuarioEditarComponent } from './pages/usuarios/usuario-editar/usuario-editar.component';
+import { UsuariosComponent } from './pages/usuarios/usuarios/usuarios.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { ProdutoCadastrarComponent } from './pages/produtos/produto-cadastrar/pr
     HeaderComponent,
     FooterComponent,
     ProdutoEditarComponent,
-    ProdutoCadastrarComponent
+    ProdutoCadastrarComponent,
+    UsuarioCadastrarComponent,
+    UsuarioEditarComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,
