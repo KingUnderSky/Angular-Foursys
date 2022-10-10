@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class UsuariosComponent implements OnInit {
 
+  //  lista de usuários
   usuarios: any[] = [];
 
   constructor(private _auth: AuthService, private _route: Router, private _usuarios: UsuariosService) { }
@@ -22,14 +23,19 @@ export class UsuariosComponent implements OnInit {
     this.getUsuarios();
   }
 
+  //  navega para tela de editar
   editar(id: number): void {
-
+    this._route.navigateByUrl('/usuarios/editar/' + id);
   }
 
+  // deleta produto
   deletar(id: number): void {
-
+    this._usuarios.deleteUsuario(id).subscribe(() => {
+      this.getUsuarios();
+    });
   }
 
+  //  busca usuários e popula a tabela
   getUsuarios(): void {
     this._usuarios.getUsers().subscribe((data: any[]) => {
       this.usuarios = data;
