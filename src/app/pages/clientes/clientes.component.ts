@@ -27,7 +27,7 @@ export class ClientesComponent implements OnInit {
   }
 
   excluir(id: number): void {
-    this._clientes.deleteClientes(id).subscribe(() => {
+    this._clientes.deleteCliente(id).subscribe(() => {
       this.buscarClientes();
     });
   }

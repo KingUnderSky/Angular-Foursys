@@ -46,7 +46,10 @@
                 <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                 <div class="form-outline flex-fill mb-0">
                   <label class="form-label" for="funcao">Função</label>
-                  <input type="text" id="funcao" class="form-control" [(ngModel)]="usuarioForm.funcao" />
+                  <select class="form-select" id="funcao" [(ngModel)]="usuarioForm.funcao">
+                    <option selected value="usuario">Usuario</option>
+                    <option value="instrutor">Instrutor</option>
+                  </select>
                   <p class="text-danger" style="min-height: 25px;">{{ validaFuncao }}</p>
                 </div>
               </div>
@@ -55,7 +58,10 @@
                 <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                 <div class="form-outline flex-fill mb-0">
                   <label class="form-label" for="acesso">Acesso</label>
-                  <input type="text" id="acesso" class="form-control" [(ngModel)]="usuarioForm.acesso" />
+                  <select class="form-select" id="acesso" [(ngModel)]="usuarioForm.acesso">
+                    <option selected value="restrito">Restrito</option>
+                    <option value="total">Total</option>
+                  </select>
                   <p class="text-danger" style="min-height: 25px;">{{ validaAcesso }}</p>
                 </div>
               </div>

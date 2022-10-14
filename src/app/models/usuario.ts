@@ -3,8 +3,8 @@ export class Usuario {
   telefone: string = '';
   email: string = '';
   senha: string = '';
-  funcao: string = '';
-  acesso: string = '';
+  funcao: string = 'usuario';
+  acesso: string = 'restrito';
   cep: string = '';
   endereco: string = '';
   bairro: string = '';
