@@ -34,7 +34,7 @@
             <h4 class="my-0 fw-normal">Modalidades</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">{{ modalidades }}</h1>
+            <h1 class="card-title pricing-card-title">{{ modalidades.length }}</h1>
             <button type="button" class="w-100 btn btn-lg btn-primary">Cadastrar nova modalidade</button>
           </div>
         </div>
@@ -53,12 +53,12 @@
             <th style="width: 22%;">Horário</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody *ngFor="let item of modalidades">
           <tr>
-            <th scope="row" class="text-start">1</th>
-            <td>Musculação</td>
-            <td>Matutino</td>
-            <td>09:00 / 10:00</td>
+            <th scope="row" class="text-start">{{ item.id }}</th>
+            <td>{{ item.modalidade }}</td>
+            <td>{{ item.turno }}</td>
+            <td>{{ item.horario }}</td>
           </tr>
         </tbody>
       </table>
