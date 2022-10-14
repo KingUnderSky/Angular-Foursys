@@ -23,7 +23,7 @@ export class ModalidadesComponent implements OnInit {
   }
 
   editar(id: number): void {
-    this._router.navigateByUrl('/clientes/editar/' + id);
+    this._router.navigateByUrl('/modalidades/editar/' + id);
   }
 
   excluir(id: number): void {
