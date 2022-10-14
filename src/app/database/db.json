@@ -1,0 +1,40 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Ettore Alessandro Rollo",
+      "telefone": 15981261762,
+      "email": "ettorerollo@hotmail.com",
+      "senha": "intelbras",
+      "funcao": "instrutor",
+      "acesso": "total",
+      "cep": "18020030",
+      "endereco": "Rua André de Zunega",
+      "bairro": "Vila Hortência",
+      "cidade": "Sorocaba",
+      "estado": "SP"
+    }
+  ],
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Giane Beatrice Ramos Barbosa Conceição",
+      "tipoPlano": "mensal",
+      "telefone": "15991134446",
+      "email": "gianebeatrice@gmail.com",
+      "cep": "18072016",
+      "endereco": "Alameda Braúna",
+      "bairro": "São Bento",
+      "cidade": "Sorocaba",
+      "estado": "SP"
+    }
+  ],
+  "modalidades": [
+    {
+      "id": 1,
+      "modalidade": "Musculação",
+      "turno": "Manhã",
+      "horario": "08:00 / 09:00"
+    }
+  ]
+}
