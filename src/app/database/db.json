@@ -31,10 +31,10 @@
   ],
   "modalidades": [
     {
-      "id": 1,
       "modalidade": "Musculação",
-      "turno": "Manhã",
-      "horario": "08:00 / 09:00"
+      "turno": "manhã",
+      "horario": "08:00 / 09:00",
+      "id": 1
     }
   ]
 }
