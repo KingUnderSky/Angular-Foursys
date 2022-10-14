@@ -15,12 +15,6 @@ export class EditarUsuarioComponent implements OnInit {
   id: number = 0;
   usuarioForm: Usuario;
 
-  validaNome: string = '';
-  validaTelefone: string = '';
-  validaEmail: string = '';
-  validaSenha: string = '';
-  validaFuncao: string = '';
-  validaAcesso: string = '';
   validaCep: string = '';
 
   constructor(private _auth: AuthenticationService, private _router: Router, private _route: ActivatedRoute, private _cep: CepService, private _usuario: UsuariosService) {

@@ -11,7 +11,6 @@
                 <div class="form-outline flex-fill mb-0">
                   <label class="form-label" for="nome">Nome</label>
                   <input type="text" id="nome" class="form-control" [(ngModel)]="usuarioForm.nome" />
-                  <p class="text-danger" style="min-height: 25px;">{{ validaNome }}</p>
                 </div>
               </div>
 
@@ -20,7 +19,6 @@
                 <div class="form-outline flex-fill mb-0">
                   <label class="form-label" for="telefone">Telefone</label>
                   <input type="text" id="telefone" class="form-control" [(ngModel)]="usuarioForm.telefone" />
-                  <p class="text-danger" style="min-height: 25px;">{{ validaTelefone }}</p>
                 </div>
               </div>
 
@@ -29,7 +27,6 @@
                 <div class="form-outline flex-fill mb-0">
                   <label class="form-label" for="email">Email</label>
                   <input type="email" id="email" class="form-control" [(ngModel)]="usuarioForm.email"/>
-                  <p class="text-danger" style="min-height: 25px;">{{ validaEmail }}</p>
                 </div>
               </div>
 
@@ -38,7 +35,6 @@
                 <div class="form-outline flex-fill mb-0">
                   <label class="form-label" for="senha">Senha</label>
                   <input type="password" id="senha" class="form-control" [(ngModel)]="usuarioForm.senha"/>
-                  <p class="text-danger" style="min-height: 25px;">{{ validaSenha }}</p>
                 </div>
               </div>
 
@@ -50,7 +46,6 @@
                     <option selected value="usuario">Usuario</option>
                     <option value="instrutor">Instrutor</option>
                   </select>
-                  <p class="text-danger" style="min-height: 25px;">{{ validaFuncao }}</p>
                 </div>
               </div>
 
@@ -62,7 +57,6 @@
                     <option selected value="restrito">Restrito</option>
                     <option value="total">Total</option>
                   </select>
-                  <p class="text-danger" style="min-height: 25px;">{{ validaAcesso }}</p>
                 </div>
               </div>
 

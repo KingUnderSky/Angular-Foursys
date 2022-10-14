@@ -17,7 +17,6 @@
   ],
   "clientes": [
     {
-      "id": 1,
       "nome": "Giane Beatrice Ramos Barbosa Conceição",
       "tipoPlano": "mensal",
       "telefone": "15991134446",
@@ -26,7 +25,8 @@
       "endereco": "Alameda Braúna",
       "bairro": "São Bento",
       "cidade": "Sorocaba",
-      "estado": "SP"
+      "estado": "SP",
+      "id": 1
     }
   ],
   "modalidades": [
