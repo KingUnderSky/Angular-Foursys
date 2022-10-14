@@ -14,6 +14,7 @@ import { EditarClienteComponent } from './pages/clientes/editar-cliente/editar-c
 import { ModalidadesComponent } from './pages/modalidades/modalidades.component';
 import { CadastroModalidadeComponent } from './pages/modalidades/cadastro-modalidade/cadastro-modalidade.component';
 import { EditarModalidadeComponent } from './pages/modalidades/editar-modalidade/editar-modalidade.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { EditarModalidadeComponent } from './pages/modalidades/editar-modalidade
     EditarClienteComponent,
     ModalidadesComponent,
     CadastroModalidadeComponent,
-    EditarModalidadeComponent
+    EditarModalidadeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
