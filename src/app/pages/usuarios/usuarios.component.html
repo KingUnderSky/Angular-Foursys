@@ -19,19 +19,19 @@
                     <th scope="col">Ações</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody *ngFor="let item of usuarios">
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Ettore Alessandro Rollo</td>
-                    <td>15981261762</td>
-                    <td>Jon@gmail.com</td>
-                    <td>Instrutor</td>
-                    <td>Total</td>
-                    <td>18020030</td>
-                    <td>Rua andré de zunega</td>
-                    <td>Vila Hortência</td>
-                    <td>Sorocaba</td>
-                    <td>SP</td>
+                    <th scope="row">{{ item.id }}</th>
+                    <td>{{ item.nome }}</td>
+                    <td>{{ item.telefone }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.funcao }}</td>
+                    <td>{{ item.acesso }}</td>
+                    <td>{{ item.cep }}</td>
+                    <td>{{ item.endereco }}</td>
+                    <td>{{ item.bairro }}</td>
+                    <td>{{ item.cidade }}</td>
+                    <td>{{ item.estado }}</td>
                     <td>
                       <button class="btn btn-sm btn-primary" style="margin-right: 20px;" (click)="editar(1)"><i class="bi bi-pencil-square"></i></button>
                       <button class="btn btn-sm btn-danger" (click)="excluir(1)"><i class="bi bi-trash3-fill"></i></button>
