@@ -6,7 +6,7 @@ import { ClientesService } from '../../services/clientes.service';
 @Component({
   selector: 'app-clientes',
   templateUrl: './clientes.component.html',
-  styleUrls: ['./clientes.component.css']
+  styleUrls: ['./clientes.component.css', '../../shared/styles.css']
 })
 export class ClientesComponent implements OnInit {
 
@@ -23,7 +23,7 @@ export class ClientesComponent implements OnInit {
   }
 
   editar(id: number): void {
-    this._router.navigateByUrl('/usuarios/editar/' + id);
+    this._router.navigateByUrl('/clientes/editar/' + id);
   }
 
   excluir(id: number): void {

@@ -13,20 +13,6 @@
       "cidade": "Sorocaba",
       "estado": "SP",
       "id": 1
-    },
-    {
-      "nome": "Usuario 2",
-      "telefone": "566as1df65a1sd6",
-      "email": "ettorelol@goagfsg.cm",
-      "senha": "fsfas",
-      "funcao": "Função",
-      "acesso": "Acesso",
-      "cep": "18020030",
-      "endereco": "Rua André de Zunega",
-      "bairro": "Vila Hortência",
-      "cidade": "Sorocaba",
-      "estado": "SP",
-      "id": 2
     }
   ],
   "clientes": [

@@ -1,6 +1,6 @@
 export class Cliente {
   nome: string = '';
-  tipoPlano: string = '';
+  tipoPlano: string = 'mensal';
   telefone: string = '';
   email: string = '';
   cep: string = '';

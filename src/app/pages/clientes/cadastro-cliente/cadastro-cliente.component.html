@@ -1,1 +1,86 @@
-<p>cadastro-cliente works!</p>
+<app-header></app-header>
+<div class="row d-flex justify-content-center align-items-center h-100">
+<div class="col-lg-12 col-xl-11">
+      <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+          <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Cadastro de cliente</p>
+          <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+              <label class="form-label" for="nome">Nome</label>
+              <input type="text" id="nome" class="form-control" [(ngModel)]="clienteForm.nome" />
+            </div>
+          </div>
+
+          <div class="d-flex flex-row align-items-center mb-4">
+            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+              <label class="form-label" for="plano">Tipo de plano</label>
+              <select class="form-select" id="plano" [(ngModel)]="clienteForm.tipoPlano">
+                <option selected value="mensal">Mensal</option>
+                <option value="bimestral">Bimestral</option>
+                <option value="semestral">Semestral</option>
+                <option value="anual">Anual</option>
+              </select>
+            </div>
+          </div>
+
+            <div class="d-flex flex-row align-items-center mb-4">
+              <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+              <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="telefone">Telefone</label>
+                <input type="text" id="telefone" class="form-control" [(ngModel)]="clienteForm.telefone" />
+              </div>
+            </div>
+
+            <div class="d-flex flex-row align-items-center mb-4">
+              <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+              <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" id="email" class="form-control" [(ngModel)]="clienteForm.email"/>
+              </div>
+            </div>
+
+            <div class="d-flex flex-row align-items-center mb-4">
+              <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+              <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="cep">CEP</label>
+                <input type="text" id="cep" class="form-control" [(ngModel)]="clienteForm.cep" (blur)="buscarCep()"/>
+                <p class="text-danger" style="min-height: 25px;">{{ validaCep }}</p>
+              </div>
+            </div>
+
+            <div class="d-flex flex-row align-items-center mb-4">
+              <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+              <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="bairro">Bairro</label>
+                <input type="text" id="bairro" class="form-control" [value]="clienteForm.bairro" disabled="true"/>
+              </div>
+            </div>
+
+            <div class="d-flex flex-row align-items-center mb-4">
+              <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+              <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="cidade">Cidade</label>
+                <input type="text" id="cidade" class="form-control" [value]="clienteForm.cidade" disabled="true"/>
+              </div>
+            </div>
+
+            <div class="d-flex flex-row align-items-center mb-4">
+              <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+              <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="estado">Estado</label>
+                <input type="text" id="estado" class="form-control" [value]="clienteForm.estado" disabled="true"/>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 d-flex justify-content-between">
+              <button type="button" class="btn btn-primary btn-lg" (click)="cadastrar()">Cadastrar</button>
+              <a routerLink="/clientes" class="btn btn-warning btn-lg">Voltar</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<app-footer></app-footer>

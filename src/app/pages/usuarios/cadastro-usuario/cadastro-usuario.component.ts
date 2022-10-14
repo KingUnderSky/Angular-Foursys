@@ -15,12 +15,6 @@ export class CadastroUsuarioComponent {
   usuarioForm: Usuario;
   auth: boolean = false;
 
-  validaNome: string = '';
-  validaTelefone: string = '';
-  validaEmail: string = '';
-  validaSenha: string = '';
-  validaFuncao: string = '';
-  validaAcesso: string = '';
   validaCep: string = '';
 
   constructor(private _usuario: UsuariosService, private _cep: CepService, private _router: Router, private _auth: AuthenticationService) {
@@ -54,5 +48,4 @@ export class CadastroUsuarioComponent {
       this.validaCep = "Cep inválido";
     }
   }
-
 }
