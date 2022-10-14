@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../../services/authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-clientes',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _auth: AuthenticationService, private _router: Router) { }
 
   ngOnInit(): void {
+    if(!this._auth.authenticate()) {
+      this._router.navigateByUrl('/login');
+    }
   }
 
 }
