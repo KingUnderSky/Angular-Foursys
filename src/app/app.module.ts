@@ -20,6 +20,7 @@ import { EditarClienteComponent } from './pages/clientes/editar-cliente/editar-c
 import { ModalidadesComponent } from './pages/modalidades/modalidades.component';
 import { CadastroModalidadeComponent } from './pages/modalidades/cadastro-modalidade/cadastro-modalidade.component';
 import { EditarModalidadeComponent } from './pages/modalidades/editar-modalidade/editar-modalidade.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,12 +41,11 @@ import { EditarModalidadeComponent } from './pages/modalidades/editar-modalidade
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
-  ]
+  schemas: []
 })
 export class AppModule { }

@@ -1,0 +1,27 @@
+.page {
+  min-height: 100vh;
+  min-width: 100vh;
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  max-width: 300px;
+}
+
+.login > div > img {
+  width: 150px;
+}
+
+.login-externo {
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  max-width: 60vh;
+  min-height: 80vh;
+}
+

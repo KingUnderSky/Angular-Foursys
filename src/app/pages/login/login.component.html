@@ -1,1 +1,29 @@
-<p>login works!</p>
+<div class="page">
+  <div class="container login-externo">
+    <div class="container login">
+      <div class="text-center">
+        <img class="mb-4" src="https://assets.website-files.com/5f209f5c6080c8ba094f2c40/5f3258dc3cb04c09d9b44629_heat-0.svg">
+      </div>
+      <h1 class="h3 mb-3 fw-normal">Por favor, se logue</h1>
+
+      <div class="form-floating">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="emailInput">
+        <label for="floatingInput">Email</label>
+        <p class="text-danger" style="min-height: 25px;">{{ validaEmail }}</p>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="senhaInput">
+        <label for="floatingPassword">Senha</label>
+        <p class="text-danger" style="min-height: 25px;">{{ validaSenha }}</p>
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="lembrar"> Lembrar de mim
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" (click)="login()">Login</button>
+      <p class="mt-5 mb-3 text-muted">© HEAT ACADEMY 2022</p>
+    </div>
+  </div>
+</div>
