@@ -15,6 +15,7 @@ import { ModalidadesComponent } from './pages/modalidades/modalidades.component'
 import { CadastroModalidadeComponent } from './pages/modalidades/cadastro-modalidade/cadastro-modalidade.component';
 import { EditarModalidadeComponent } from './pages/modalidades/editar-modalidade/editar-modalidade.component';
 import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HomeComponent } from './pages/home/home.component';
     ModalidadesComponent,
     CadastroModalidadeComponent,
     EditarModalidadeComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
