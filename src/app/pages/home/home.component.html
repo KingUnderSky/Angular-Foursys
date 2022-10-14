@@ -1,5 +1,68 @@
 <app-header></app-header>
-<main>
+<div class="container py-3">
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Academia HEAT </h1>
+    <p class="fs-5 text-muted">Faça o controle de todos os exercícios e mantenha seu corpo saudável. Aqui você encotra a lista de todas as atividades disponíveis e as principais informações de nossa plataforma.</p>
+  </div>
+  <main>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Usuários</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">{{ usuarios }}</h1>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Cadastrar novo usuário</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Clientes</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">{{ clientes }}</h1>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Cadastrar novo cliente</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Modalidades</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">{{ modalidades }}</h1>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Cadastrar nova modalidade</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</main>
+    <h2 class="display-6 text-center mb-4">Modalidades disponíveis</h2>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Modalidade</th>
+            <th style="width: 22%;">Turno</th>
+            <th style="width: 22%;">Horário</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">1</th>
+            <td>Musculação</td>
+            <td>Matutino</td>
+            <td>09:00 / 10:00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
 <app-footer></app-footer>
