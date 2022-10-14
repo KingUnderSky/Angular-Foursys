@@ -3,6 +3,7 @@ import { UsuariosService } from '../../../services/usuarios.service';
 import { Usuario } from '../../../models/usuario';
 import { CepService } from '../../../services/cep.service';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../../../services/authentication.service';
 
 @Component({
   selector: 'app-cadastro-usuario',
@@ -12,6 +13,7 @@ import { Router } from '@angular/router';
 export class CadastroUsuarioComponent {
 
   usuarioForm: Usuario;
+  auth: boolean = false;
 
   validaNome: string = '';
   validaTelefone: string = '';
@@ -21,8 +23,9 @@ export class CadastroUsuarioComponent {
   validaAcesso: string = '';
   validaCep: string = '';
 
-  constructor(private _usuario: UsuariosService, private _cep: CepService, private _router: Router) {
+  constructor(private _usuario: UsuariosService, private _cep: CepService, private _router: Router, private _auth: AuthenticationService) {
     this.usuarioForm = new Usuario();
+    this.auth = _auth.authenticate();
    }
 
   cadastrar(): void {
