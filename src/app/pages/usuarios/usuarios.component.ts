@@ -19,17 +19,22 @@ export class UsuariosComponent implements OnInit {
       this._router.navigateByUrl('/login');
     }
 
+    this.buscarUsuarios();
+  }
+
+  editar(id: number): void {
+    this._router.navigateByUrl('/usuarios/editar/' + id);
+  }
+
+  excluir(id: number): void {
+    this._usuarios.deleteUsuario(id).subscribe(() => {
+      this.buscarUsuarios();
+    });
+  }
+
+  buscarUsuarios(): void {
     this._usuarios.getAll().subscribe((data: any[]) =>{
       this.usuarios = data;
     });
   }
-
-  editar(id: number): void {
-
-  }
-
-  excluir(id: number): void {
-
-  }
-
 }

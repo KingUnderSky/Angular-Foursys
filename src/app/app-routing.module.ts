@@ -26,17 +26,17 @@ const routes: Routes = [
   //  Rotas de usuário
   { path: 'usuarios', component: UsuariosComponent },
   { path: 'usuarios/cadastro', component: CadastroUsuarioComponent },
-  { path: 'usuarios/editar', component: EditarUsuarioComponent },
+  { path: 'usuarios/editar/:id', component: EditarUsuarioComponent },
 
   //  Rotas de clientes
   { path: 'clientes', component: ClientesComponent },
   { path: 'clientes/cadastro', component: CadastroClienteComponent },
-  { path: 'clientes/editar', component: EditarClienteComponent },
+  { path: 'clientes/editar/:id', component: EditarClienteComponent },
 
   //  Rotas de modalidades
   { path: 'modalidades', component: ModalidadesComponent },
   { path: 'modalidades/cadastro', component: CadastroModalidadeComponent },
-  { path: 'modalidades/editar', component: EditarModalidadeComponent }
+  { path: 'modalidades/editar/:id', component: EditarModalidadeComponent }
 
 ];
 

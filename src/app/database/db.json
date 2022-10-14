@@ -13,6 +13,20 @@
       "bairro": "Vila Hortência",
       "cidade": "Sorocaba",
       "estado": "SP"
+    },
+    {
+      "nome": "Ettore Alessandro Rollo",
+      "telefone": "15981261762",
+      "email": "ettorerollo@gmail.com",
+      "senha": "intelbras",
+      "funcao": "usuario",
+      "acesso": "restrito",
+      "cep": "18020030",
+      "endereco": "Rua André de Zunega",
+      "bairro": "Vila Hortência",
+      "cidade": "Sorocaba",
+      "estado": "SP",
+      "id": 2
     }
   ],
   "clientes": [

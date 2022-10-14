@@ -1,1 +1,107 @@
-<p>cadastro-usuario works!</p>
+<section class="vh-100">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Cadastro de usuário</p>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="nome">Nome</label>
+                      <input type="text" id="nome" class="form-control" [(ngModel)]="usuarioForm.nome" />
+                      <p class="text-danger" style="min-height: 25px;">{{ validaNome }}</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="telefone">Telefone</label>
+                      <input type="text" id="telefone" class="form-control" [(ngModel)]="usuarioForm.telefone" />
+                      <p class="text-danger" style="min-height: 25px;">{{ validaTelefone }}</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="email">Email</label>
+                      <input type="email" id="email" class="form-control" [(ngModel)]="usuarioForm.email"/>
+                      <p class="text-danger" style="min-height: 25px;">{{ validaEmail }}</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="senha">Senha</label>
+                      <input type="password" id="senha" class="form-control" [(ngModel)]="usuarioForm.senha"/>
+                      <p class="text-danger" style="min-height: 25px;">{{ validaSenha }}</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="funcao">Função</label>
+                      <input type="text" id="funcao" class="form-control" [(ngModel)]="usuarioForm.funcao" />
+                      <p class="text-danger" style="min-height: 25px;">{{ validaFuncao }}</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="acesso">Acesso</label>
+                      <input type="text" id="acesso" class="form-control" [(ngModel)]="usuarioForm.acesso" />
+                      <p class="text-danger" style="min-height: 25px;">{{ validaAcesso }}</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="cep">CEP</label>
+                      <input type="text" id="cep" class="form-control" [(ngModel)]="usuarioForm.cep" (blur)="buscarCep()"/>
+                      <p class="text-danger" style="min-height: 25px;">{{ validaCep }}</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="bairro">Bairro</label>
+                      <input type="text" id="bairro" class="form-control" [value]="usuarioForm.bairro" disabled="true"/>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="cidade">Cidade</label>
+                      <input type="text" id="cidade" class="form-control" [value]="usuarioForm.cidade" disabled="true"/>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="estado">Estado</label>
+                      <input type="text" id="estado" class="form-control" [value]="usuarioForm.estado" disabled="true"/>
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 d-flex justify-content-between">
+                    <button type="button" class="btn btn-primary btn-lg" (click)="cadastrar()">Cadastrar</button>
+                    <a routerLink="/home" class="btn btn-warning btn-lg">Voltar</a>
+                  </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
